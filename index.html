@@ -1,59 +1,41 @@
-<!--Name: Zainab Rana-->
-<!--Roll number: 26i-3220-->
-<!--Section: SE-E-->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dessert Cafe</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dessert Cafe | Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-     <h1>Dessert Cafe</h1>
+  <header class="site-header">
+    <a class="logo" href="index.html">Dessert Cafe</a>
+    <nav aria-label="Main navigation">
+      <a class="active" href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-     <img src="cupcake.png" alt="A slice of happiness">
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">A LITTLE MOMENT OF SWEETNESS</p>
+        <h1>Where every layer tells a story.</h1>
+        <p>Freshly made desserts, lovely treats, and little reasons to smile.</p>
+        <a class="button" href="menu.html">Order Now</a>
+      </div>
+      <div class="hero-photo">
+        <img src="cupcake.png" alt="Vanilla cupcake topped with white frosting and colorful sprinkles">
+      </div>
+    </section>
 
-     <p>Where every layer tells a story.</p>
+    <section class="welcome">
+      <h2>Welcome to Dessert Cafe</h2>
+      <p>Enjoy the sweet side of life. Find your favourite cakes, pastries, shakes, or hot drinks on our menu.</p>
+      <a class="text-link" href="menu.html">Explore our menu →</a>
+    </section>
+  </main>
 
-     <h2>Our menu</h2>
-
-     <p>Enjoy the sweet side of life.</p>
-     <table>
-        <tr>
-           <th>Items</th>
-           <th>Price</th>
-        </tr>
-
-        <tr>
-            <td>Cakes</td>
-            <td>$24.99</td>
-        </tr>
-
-        <tr>
-            <td>Pastries</td>
-            <td>$14.99</td>
-        </tr>
-
-        <tr>
-            <td>Shakes</td>
-            <td>$8.99</td>
-        </tr>
-
-        <tr>
-            <td>Hot Drinks</td>
-            <td>$9.99</td>
-        </tr>
-     </table>
-
-     <button type="button" onclick="orderNow()">Order Now</button>
-
-       <script>
-       function orderNow() {
-       console.log("Order Now button was clicked");
-       window.alert("Thank you! Your sweet treat has been ordered.");
-   }   </script>
-
+  <footer>© 2026 Dessert Cafe. Made with love.</footer>
 </body>
-
 </html>

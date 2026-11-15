@@ -1,76 +1,198 @@
+/* Dessert Cafe - simple pastel pink theme */
+:root {
+  --pink: #b83a5e;
+  --deep-pink: #a22349;
+  --soft-pink: #fff1f3;
+  --pale-pink: #ffe3e9;
+  --border-pink: #e8b9c7;
+  --text: #3b2420;
+  --muted: #7a4a55;
+  --white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
 body {
-  font-family: Georgia, serif;
-  background: #fff1f3;
-  color: #3b2420;
-  text-align: center;
   margin: 0;
-  padding: 30px;
+  background: var(--soft-pink);
+  color: var(--text);
+  font-family: Georgia, serif;
+  line-height: 1.6;
 }
 
-h1 {
-  color: #b83a5e;
-  font-size: 3rem;
-  margin-bottom: 20px;
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 7%;
+  background: var(--pale-pink);
+  border-bottom: 1px solid var(--border-pink);
 }
 
-h2 {
-  color: #b83a5e;
-  font-size: 2rem;
-  margin-top: 40px;
-  border-bottom: 2px solid #d98ca3;
+.logo {
+  color: var(--pink);
+  font-size: 1.55rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav { display: flex; gap: 10px; }
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 18px;
+  background: var(--white);
+}
+nav a:hover, nav a.active {
+  color: var(--white);
+  background: var(--pink);
+}
+
+.hero {
+  max-width: 1100px;
+  margin: 45px auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.hero-copy h1, .page-heading h1 {
+  color: var(--pink);
+  line-height: 1.15;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  margin: 8px 0 16px;
+  background: var(--pale-pink);
   display: inline-block;
-  padding-bottom: 5px;
+  padding: 12px 18px;
+  border-radius: 10px;
 }
 
-p {
-  font-size: 1.2rem;
-  font-style: italic;
-  color: #7a4a55;
+.hero-copy > p:not(.eyebrow) { color: var(--muted); font-size: 1.1rem; }
+.eyebrow { color: var(--muted); letter-spacing: 2px; font-size: 0.75rem; font-style: normal; }
+.hero-photo img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  border: 6px solid var(--white);
+  border-radius: 14px;
+  box-shadow: 0 4px 14px #d9b3bd;
 }
 
-img {
-  width: 200px;
-  max-width: 100%;
-  border-radius: 15px;
-  border: 6px solid white;
-  box-shadow: 0 4px 12px #d9b3bd;
-}
-
-table {
-  width: 600px;
-  max-width: 100%;
-  margin: 20px auto;
-  border-collapse: collapse;
-  background: white;
-  font-size: 1.1rem;
-  box-shadow: 0 4px 12px #d9b3bd;
-}
-
-th, td {
-  border: 1px solid #d98ca3;
-  padding: 12px 35px;
-}
-
-th {
-  background: #b83a5e;
-  color: white;
-}
-
-tr:hover td {
-  background: #ffe3e9;
-}
-
-button {
-  background-color: #a22349;
-  color: white;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 25px;
-  font-size: 18px;
+.button {
+  display: inline-block;
+  background: var(--deep-pink);
+  color: var(--white);
+  border: 0;
+  border-radius: 22px;
+  padding: 11px 25px;
+  margin-top: 12px;
+  font: inherit;
+  font-size: 1rem;
+  text-decoration: none;
   cursor: pointer;
-  margin-top: 20px;
+}
+.button:hover { background: #d1889c; }
+
+.welcome {
+  text-align: center;
+  background: var(--white);
+  padding: 35px 20px;
+  margin-top: 35px;
+}
+h2 { color: var(--pink); }
+.welcome p { color: var(--muted); }
+.text-link { color: var(--deep-pink); }
+
+.page-main { max-width: 1100px; margin: 0 auto; padding: 35px 24px 55px; }
+.page-heading { text-align: center; margin-bottom: 28px; }
+.page-heading h1 { font-size: 2.7rem; margin: 4px 0 8px; }
+.page-heading p:last-child { color: var(--muted); }
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.menu-card {
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--border-pink);
+  border-radius: 12px;
+  box-shadow: 0 3px 10px #d9b3bd55;
+}
+.menu-card img { width: 100%; height: 210px; object-fit: cover; display: block; }
+.menu-card-content { padding: 15px 17px 19px; }
+.menu-card h2 { font-size: 1.25rem; margin: 0 0 5px; }
+.item-description { color: var(--muted); min-height: 48px; margin: 5px 0; }
+.price { color: var(--deep-pink); font-weight: bold; font-size: 1.1rem; margin: 10px 0 2px; }
+.add-button { width: 100%; }
+
+.cart-panel {
+  margin-top: 30px;
+  padding: 22px;
+  background: var(--white);
+  border: 1px solid var(--border-pink);
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.cart-panel h2 { margin: 0 0 8px; }
+.cart-count { background: var(--pale-pink); border-radius: 50%; padding: 2px 9px; font-size: 0.9rem; }
+#cart-items { margin: 5px 0; padding-left: 20px; color: var(--muted); }
+.cart-total { margin: 8px 0 0; }
+.cart-total strong { color: var(--deep-pink); }
+
+.contact-main { max-width: 900px; }
+.contact-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  background: var(--white);
+  border: 1px solid var(--border-pink);
+  border-radius: 12px;
+  padding: 28px;
+}
+.contact-details p { color: var(--muted); }
+.contact-details a { color: var(--deep-pink); }
+.small-note, .form-note { font-size: 0.88rem; color: var(--muted); }
+.contact-form { display: flex; flex-direction: column; gap: 9px; }
+.contact-form h2 { margin-top: 0; }
+.contact-form label { color: var(--muted); }
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--border-pink);
+  border-radius: 7px;
+  padding: 11px;
+  font: inherit;
+  background: #fffafb;
+}
+.contact-form textarea { resize: vertical; }
+.contact-form .button { align-self: flex-start; }
+
+footer {
+  text-align: center;
+  padding: 18px;
+  color: var(--muted);
+  background: var(--white);
+  border-top: 1px solid var(--border-pink);
 }
 
-button:hover {
-  background-color: #d1889c;
+@media (max-width: 760px) {
+  .site-header { flex-direction: column; padding: 16px 5%; }
+  nav { gap: 18px; }
+  .hero { grid-template-columns: 1fr; gap: 25px; margin: 28px auto; }
+  .hero-photo { max-width: 480px; }
+  .menu-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .contact-card { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .menu-grid { grid-template-columns: 1fr; }
+  .cart-panel { flex-direction: column; align-items: stretch; }
+  .hero-copy h1 { font-size: 2.35rem; }
 }
